@@ -1,0 +1,333 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, a span b {
+    margin: 0px;
+    padding: 0px;
+    font-weight: 100;
+    list-style: none;
+    font-family: Microsoft Yahei, sans-serif;
+}
+
+
+.container-fluid{
+    overflow-x:hidden;
+}
+
+ul li{
+    list-style:none;
+}
+
+.sidenav{
+    margin-top:50px;
+    margin-left:20px;
+}
+
+.sidenav li{
+    padding-top:5px;
+}
+
+.sidenav li label{
+    left: 0px;
+}
+
+.sidenav li a{
+    color:azure;
+    font-size:16px;
+}
+
+.navicon label {
+    color: white; font: bold 12px Montserrat; text-align: center;
+    border: 2px solid white; border-radius: 4px;
+    display: block; padding: 10px 0;
+    width:20%; position: absolute; left:10%;top:20px;
+    cursor: pointer; text-transform: uppercase;
+}
+.mainpage{
+    transition: all 0.4s
+}
+#tm:checked ~ .mainpage {transform: translateX(200px);}
+
+.citylist{
+    list-style: none;
+}
+.citylist li{
+    float:left;
+    padding:5px 30px 30px 5px;
+}
+
+.pc_nav ul li{float:left;padding-right:60px;}
+.mobile_nav_list ul li{float:left;padding-left:30px;}
+.mobile_nav_list div div span a{color:#3e516a }
+.mobile_nav_list div div{padding-left:0px;padding-right:0px;}
+
+.coorp_shop div div p{
+    margin-left: 15px;
+}
+
+.text_style p{
+    margin-left: 15px;
+}
+
+.citybutn{
+    background-color:#faf9f7;
+    width:80px;
+    height:80px;
+    text-align: center;
+    padding-top:30px;
+    border-radius:40px;
+    color:white;
+    /*padding:25px 20px 25px 20px;*/
+}
+
+.citybutn_new{
+    border:1px solid #104e5c;
+    width:80px;
+    height:80px;
+    text-align: center;
+    padding-top:30px;
+    border-radius:40px;
+    color:#3d516a;
+    /*padding:25px 20px 25px 20px;*/
+}
+
+.banner-center-text{background-color:#f1f1f1}
+.banner-center-text div {margin-top:20px;margin-bottom: 20px;}
+.banner-center-text div ul li {padding-top: 10px;padding-bottom: 10px;text-align: center;font-size:16px;}
+.banner-center-text div ul :nth-child(1n){color:#908ca2}
+.banner-center-text div ul :nth-child(2n){color:#388dd5}
+
+.footer_text div div p {
+    color:#f0f0f0;
+}
+
+.pc_nav div{
+    padding-top:27px;
+    padding-bottom:13px;
+}
+
+.pc_nav div a{
+    text-align: center;
+    font-size:16px;
+    color:#3e516a;
+}
+
+.pc_nav div img{
+    padding-top:4px;
+}
+
+.signinfo div{
+    padding-top:2px;
+    padding-bottom:2px;
+}
+.signinfo{background:#3d516b;
+    opacity:0.8;
+    filter:alpha(opacity=80);}
+
+.map_btn{background-color:#ffffff;padding-top:5px;padding-bottom:40px;}
+
+.model_style div input{
+    margin-top:0px;
+}
+
+.model_style div{
+    margin-top:10px;
+}
+
+.select_style{
+    width:130px;
+    height:50px;
+    margin-top:10px;
+    border-radius:0px;
+}
+
+@media screen and (min-width:960px){
+    .school_box{width: 53%;height: 120px;margin: 0 auto;padding-top:15px;border-bottom: 2px solid #f3f9f9;}
+    .school_box hr{margin-bottom: 15px;margin-top:0px;color:#3d516a;}
+    .box_img{position: absolute;left:23.5%;float: left;}
+    .box_img img{width:90px;height:90px;}
+    .next_icon{position: absolute;right:24%;float:right;}
+    .next_icon img{width:8px;margin-top:37px;}
+    /*.box_test{position: absolute;left:32%;heifht:110px;float: left;margin-right:50px;}*/
+    /*修改*/
+    .box_test{position: absolute;left: 31.5%;width: 36%;height: 90px;overflow: hidden;}
+    .school_box a{margin-bottom:10px;color:#3c506b;font-size:13px;}
+    /*.text-address a{color:#3c506b;font-size:13px;}*/
+    .text-address{margin-top:5px;}
+
+    .text-address_school a{color:#3c506b;font-size:14px;}
+    .text-address_school{margin-top:15px;}
+
+
+    .sdetail_pc_style{width:55%;margin:10px auto auto auto}
+
+    #drivingMap{height:320px;margin-left:12px;}
+    .wechat_inc div div div div div{margin-bottom:15px;}
+    .schoollist div div div div div{margin-bottom:30px;}
+    .logo-icon:first-of-type{position: relative;}
+    .logo-icon:last-of-type{position: relative;}
+    .footer_text div div .img-responsive1{width:100px;height:117px;position:absolute;left:-17px;top:-120px;opacity: 0;}
+    .footer_text div div .img-responsive2{width:100px;height:117px;position:absolute;left:-17px;top:-120px;opacity: 0;}
+    .logo-icon:first-of-type{position: relative;}
+    .logo-icon:first-of-type .img-responsive:hover .img-responsive1{opacity: 1;}
+    .logo-icon:last-of-type{position: relative;}
+    .logo-icon:last-of-type .img-responsive:hover .img-responsive2{opacity: 1;}
+    .m_inc div{margin-bottom:30px;}
+}
+
+@media screen and (max-width:1080px) {
+    .school_box{width:95%;margin:0 auto;height: 90px;padding-top: 10px;border-bottom: 1px solid #f3f9f9;}
+    .school_box hr{margin-bottom: 9px;margin-top:0px;color:#3d516a;}
+    .box_img{position: absolute;left:10px;float: left;}
+    .box_img img{width:70px;height:70px;}
+    .next_icon{position: absolute;right:10px;float:right;}
+    .next_icon img{width:5px;margin-top:30px;}
+    .box_test{position: absolute;left:90px;heifht:80px;float: left;margin-right:50px;}
+    .school_box a{margin-bottom:10px;color:#3c506b;font-size:13px;}
+    /*.text-address a{color:#3c506b;font-size:13px;}*/
+    .text-address{margin-top:5px;}
+
+    .text-address_school a{color:#3c506b;font-size:13px;}
+    .text-address_school{margin-top:30px;}
+    .text-product{display:none}
+    #drivingMap{height:220px;margin-left:12px;}
+    .shadowl{padding-left:25px;padding-right:5px;}
+    .shadowr{padding-left:5px;padding-right:25px;}
+    .shadowup{display: none}
+
+    .schoolm div div{padding-left:25px;padding-right:25px;}
+    .schoolall {margin-left:10px;margin-right:10px;}
+    /*.schooll{padding-left:25px;padding-right:5px;}*/
+    /*.schoolr{padding-left:5px;padding-right:25px;}*/
+
+    .coach_mob{padding-left:10px;padding-right:10px;}
+    .coach_mob div{padding-left:5px;padding-right:5px;}
+
+    .stand {color:#ffffff;margin-top:5px;font-size:10px}
+    .stand_next {color:#ffffff;font-size:10px;margin-top:5px;padding-bottom:5px;}
+    .stand div{padding-left:10px;padding-right:10px;}
+
+    .citybutn_new{
+        border:1px solid #104e5c;
+        width:60px;
+        height:60px;
+        text-align: center;
+        padding-top:20px;
+        border-radius:30px;
+        color:#3d516a;
+        /*padding:25px 20px 25px 20px;*/
+    }
+
+    .map_space{padding-left:30px;padding-right:15px;}
+    .map_space div div div{padding-left:5px;padding-right:5px;}
+    .coach_inc{margin-top:10px;margin-left: 0px;margin-right: 0px;}
+    .coach_mob div{padding-left:10px;padding-right:10px;}
+    .codeic{padding-left:15px;padding-right:15px;margin-left:0px;margin-right:0px;}
+    .codeic div{padding:0px;}
+    .wechat_inc div div div div div img{padding-left:10px;padding-right:10px;width:100%}
+    .m_inc{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .m_inc div{padding:5px;}
+    .footer_text div{padding-bottom:10px;}
+    .coach_style div{padding-left:0px;padding-right:0px;}
+
+    .pro_inctext{margin-top:10px;margin-left: 0px;margin-right: 0px;}
+    .pro_title {padding-top:50px;}
+    .mb_nav {padding-top:20px;padding-bottom:20px;}
+    .mobile_nav_list div div{padding-top:3px;}
+
+    .wechat_inc div div div div div{margin-bottom:10px;}
+    /*.schoollist div div div div div{margin-bottom:3px;}*/
+}
+
+.nextpoint3{
+    color:#C9C9C9;
+    font-size:17px;
+}
+
+.nextpoint2{
+    color:#B7B7B7;
+    font-size:17px;
+}
+
+.nextpoint1{
+    color:#626d7b;
+    font-size:17px;
+}
+.nextpoint4{
+    color:#ffffff;
+    font-size:17px;
+}
+
+.feature div p{padding-top:5px;padding-bottom:5px;font-size: 15px;}
+.feature div{margin-bottom:10px;}
+
+.shadow div div div{
+    padding-left:5px;
+    padding-right:5px;
+}
+
+.coach_inc div div div div div img{padding:5px;margin-bottom:8px;font-size: 15px;}
+.stand {color:#ffffff;margin-top:5px;}
+.stand_next {color:#ffffff;font-size:10px;margin-top:5px;padding-bottom:5px;}
+.map_style div p{color: #ffffff;font-size:18px;margin-top:10px;}
+.shopinfo div p{color:#ffffff;margin-top: 30px;}
+
+.infobox_style tr td {border:0px;}
+/*.shadow{width:212;height:132px;overflow:hidden}*/
+/*.shadowup{width:212;height:135px;}*/
+.shadowup img{opacity:0.9;filter:alpha(opacity=90);}
+
+.select_inc div div {margin-top:10px;}
+.pro_tag div div img {margin-top:15px;margin-bottom:10px;}
+.pc_nav div div div  div{padding-top: 0px;padding-bottom: 0px;}
+.pc_nav div div div  div div{margin-top:10px;}
+.signin_btn div img{width:300px;margin: auto}
+.footer_style{padding-top:50px;padding-bottom:50px;padding-right:15px;padding-left:15px;background-image:url('/Restructures/imgs/products/bag01.jpg')}
+.footer_text div div:nth-child(1) p:nth-child(1){border-left:1px solid #c5c8cc;height:20px;}
+.footer_text div div:nth-child(2) p:nth-child(1){border-left:1px solid #c5c8cc;height:20px;}
+.footer_text div div:nth-child(3) p:nth-child(1){border-left:1px solid #c5c8cc;height:20px;}
+.footer_text div div:nth-child(4) p:nth-child(1){border-left:1px solid #c5c8cc;height:20px;}
+.footer_text div:nth-child(2) div{border:0}
+.footer_text div:nth-child(3) div{border:0}
+.footer_text div div p a{color: #89c0c5}
+.footer_text div div img{width:60px;height:85px;}
+.footer_text div div img:first-of-type:hover{cursor: pointer;}
+.footer_text div div .img-responsive1{width:100px;height:117px;position:absolute;left:-17px;top:-120px;}
+.footer_text div div .img-responsive2{width:100px;height:117px;position:absolute;left:-17px;top:-120px;}
+.logo-icon:first-of-type{position: relative;}
+.img-responsive1{opacity: 0;}
+.img-responsive2{opacity: 0;}
+.footer_text div .logo-icon1 img:hover+.img-responsive1{opacity: 1;}
+.logo-icon:last-of-type{position: relative;}
+.footer_text div .logo-icon2 img:hover+.img-responsive2{opacity: 1;}
+.schoolall{margin-top:30px;}
+.sname div img{margin-bottom:15px;}
+.sliderinc_text p{margin-bottom:10px;color:475b6a;font-size: 12px;}
+.point{width:6px;height:6px;background-color:#4a7285;border-radius:3px;margin-top:8px;}
+@media screen and (max-width:960px){
+    .footer_text div div:nth-child(1) p:nth-child(1){border-left:0px;height:20px;}
+    .footer_text div div:nth-child(2) p:nth-child(1){border-left:0px;height:20px;}
+    .footer_text div div:nth-child(3) p:nth-child(1){border-left:0px;height:20px;}
+    .footer_text div div:nth-child(4) p:nth-child(1){border-left:0px;height:20px;}
+    /*.footer_text div div:nth-child(1){border-left:1px solid rgba(0,0,0,0);height:20px;}*/
+    .footer_text div div:nth-child(2){border-left:1px solid #c5c8cc;height:20px;}
+    .footer_text div div:nth-child(3){border-left:1px solid #c5c8cc;height:20px;}
+    .footer_text div div:nth-child(4){border-left:1px solid #c5c8cc;height:20px;}
+    .logo-icon{margin-top: 110px;padding-right:0;}
+    .about-first{padding-left:5px;padding-right: 5px;box-sizing: border-box;}
+    .about-second{padding-left:5px;padding-right:5px;box-sizing: border-box;}
+    .about-last{padding-right:5px;padding-left:5px;box-sizing: border-box;}
+    .footer_text div div .img-responsive1{width:100px;height:117px;position:absolute;left:-17px;top:-120px;opacity: 0;}
+    .footer_text div div .img-responsive2{width:100px;height:117px;position:absolute;left:-17px;top:-120px;opacity: 0;}
+    .logo-icon:first-of-type{position: relative;}
+    .logo-icon:first-of-type .img-responsive:hover .img-responsive1{opacity: 1;}
+    .logo-icon:last-of-type{position: relative;}
+    .logo-icon:last-of-type .img-responsive:hover .img-responsive2{opacity: 1;}
+
+}
+
+.codepic p{padding:5px;}
+
+
+
+

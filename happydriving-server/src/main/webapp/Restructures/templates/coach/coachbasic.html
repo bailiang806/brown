@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="d-drivingschool">
+            <input id="currentPhoneNumber" type="hidden" value="${phoneNumber}">
+            <div class="row d-d-row1">
+                <div class="col-xs-11"><span> 训练场地 </span></div>
+                <br>
+                <div class="trainingAddress">
+                    <div class="province" style="padding:0 5px; width: 25%; float: left;">
+                        <input type="text" id="province" name="province" style="width: 100%; height: 26px; color:#333; display: none;">
+                    </div>
+                    <div class="city" style="padding:0 5px; width: 25%; float: left;">
+                        <input type="text" id="city" name="city"  style="width: 100%; height: 26px; color:#333; display: none;">
+                    </div>
+                    <div class="county" style="padding:0 5px; width: 25%; float: left;">
+                        <input type="text" id="county" name="county"  style="width: 100%; height: 26px; color:#333; display: none;">
+                    </div>
+                    <div class="town" style="padding:0 5px; width: 25%; float: left;">
+                        <input type="text" id="town" name="town"  style="width: 100%; height: 26px; color:#333; display: none;">
+                    </div>
+                </div>
+            </div>
+            <div class="row d-d-row3">
+                <span>详细地址</span>
+                <input  name="detailAddress" type="text" placeholder=" ">
+            </div>
+
+            <div class="row d-d-row1 dcb-row1">
+                <div class="col-xs-11"><span> 选择班型 </span></div>
+                <br>
+                <div id="classList" ng-init="classtype.getclasstype()">
+                    <select ng-model="seletedclass" ng-options="item.id as item.classtype for item in classtype.classinfo">
+                        <option value="">请选择班型</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row d-d-row1 dcb-row2">
+                <div class="col-xs-11"><span> 选择车型 </span></div>
+                <br>
+                <div id="car_id" ng-init="cartype.getcartype()">
+                    <select ng-model="seletedcar" ng-options="item.id as item.cartype for item in cartype.carinfo">
+                        <option value="">请选择车型</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row d-d-row3">
+                <span>填写价格（元）</span>
+                <input oninput="dInput(event)" ID="dprice" name="price" type="tel" placeholder=" ">
+            </div>
+            <div class="row d-t-row2">
+                <div class="col-lg-12 d-d-row3  input-group"><span class="input-group-addon">姓名：</span>
+                    <input id="drname" name="username" oninput="regInput(event)" type="text" placeholder="请输入姓名">
+                </div>
+                <div class="dcb-ok">
+                    <input id="dlok" type="submit" onclick="return validate();" class="btn btn-danger" value="确定">
+                </div>
+            </div>
+    </div>
+</div>
+<script>
+
+
+</script>

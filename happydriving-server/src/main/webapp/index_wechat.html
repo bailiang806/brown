@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en" ng-app="weixinapp">
+<head>
+    <!--<base href="/index_wechat.html">-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>e驾陪</title>
+    <link href="/Restructures/assets/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!--<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>-->
+    <link rel="stylesheet" href="/Restructures/effect/css/weixin.css"/>
+    <link rel="stylesheet" href="/Restructures/effect/css/signmodel.css"/>
+    <link rel="stylesheet" href="/Restructures/effect/css/swiper.min.css"/>
+    <link rel="stylesheet" href="/Restructures/effect/css/weixin/extra.css"/>
+
+</head>
+<style>
+</style>
+<body ng-controller="weixincontroller">
+
+<div class="container-fluid">
+    <div ng-view>
+    </div>
+</div>
+<!--<ng-include src="'/Restructures/templates/public/navbar_bottom.html'"></ng-include>-->
+<!-- Modal -->
+<ng-include src="'/Restructures/models/ordercourse.html'"></ng-include>
+<div class="container-fluid">
+    <div class="row" >
+
+        <div class="col-md-12" >
+            <div class="modal fade" id="CityModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="margin-top: 130px;">
+                <div class="modal-dialog" role="document">
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <div class="modal-content">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-right:10px; margin-top: 10px;"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="myModalLabel" style="text-align:center;">请先选择城市</h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-xs-12">
+                                        <div class="modal-body">
+                                            <div class="row" >
+                                                <div class="col-xs-10 col-xs-offset-1">
+                                                    <a href="" aria-label="Close" ng-click="setlocation('1')">
+                                                        <div class="col-xs-4 text-center"  >
+                                                            <span>福州</span>
+                                                        </div></a>
+                                                    <a href="" aria-label="Close" ng-click="setlocation('2')">
+                                                        <div class="col-xs-4 text-center">
+                                                            <span> 厦门</span>
+                                                        </div></a>
+                                                    <a href="" aria-label="Close" ng-click="setlocation('4')">
+                                                        <div class="col-xs-4 text-center">
+                                                            <span>上海</span>
+                                                        </div></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row" >
+        <div class="col-md-12" >
+            <div class="modal fade" id="signinModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="modal-content">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-right: 10px;margin-top: 10px;"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row modal-body sign_model">
+                                            <div class="row">
+                                                <div class="col-xs-10 col-xs-offset-1 " >
+                                                    <div class="row">
+                                                        <div class="col-xs-12 mbody">
+                                                            <table>
+                                                                <tbody>
+                                                                <tr style="margin-top:20px;">
+                                                                    <td style="border-right:1px solid #e5e5e5"><span class="glyphicon glyphicon-user"><span>姓名</span></span></td>
+                                                                    <td><input type="text" style="border:0px;width:100%;height:90%;" ng-model="userinfo.name"></td>
+                                                                </tr>
+                                                                <tr >
+                                                                    <td style="border-right:1px solid #e5e5e5"><span class="glyphicon glyphicon-earphone"><span>电话</span></span></td>
+                                                                    <td><input type="tel" style="border:0px;width:100%;height:90%;" ng-model="userinfo.phone"></td>
+                                                                </tr>
+                                                                <!--<tr >-->
+                                                                    <!--<td style="border-right:1px solid #e5e5e5" ng-click="userinfo.sendmessage()"><span>发送验证码</span></td>-->
+                                                                    <!--<td><input type="text" style="border:0px;width:100%;height:90%;" ng-model="userinfo.verifynum"></td>-->
+                                                                <!--</tr>-->
+                                                                <tr>
+                                                                    <td style="border-right:1px solid #e5e5e5;"><span class="glyphicon glyphicon-flag"><span>城市</span></span></td>
+                                                                    <td>
+                                                                        <select type="text" ng-model="userinfo.city" style="border:0px;width:100%;height:90%;background-color: #ffffff">
+                                                                            <option value="1" selected = "selected">福州</option>
+                                                                            <option value="2">厦门</option>
+                                                                            <option value="4">上海</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+
+                                                            </table>
+                                                            <table style="margin-top:6px;background-color:#ed695c;">
+                                                                <tbody>
+                                                                <tr style="margin-top:10px;color:#ffffff">
+                                                                    <td ng-click="userinfo.signin()" colspan=2 style="border-right:1px solid #e5e5e5"><span>提&nbsp;&nbsp;交</span></td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table style="margin-top:6px;background-color:#484848">
+                                                                <tbody>
+                                                                <tr style="margin-top:10px;color:#ffffff">
+                                                                    <td> <a href="tel:4009606796" style="color: #ffffff">拨打4009-606-796电话,马上咨询</a></td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+<script src="/Restructures/assets/js/angular.min.js"></script>
+<script src="/Restructures/assets/js/angular_router.min.js"></script>
+<script src="/Restructures/app/weixinapp.js"></script>
+<script src="/Restructures/router/weixinrouter.js"></script>
+<script src="/Restructures/controller/weixincontroller.js"></script>
+<!--filter-->
+<script src="/Restructures/filter/weixinfilter.js" defer async="true"></script>
+<script src="/Restructures/effect/js/angular-sanitize.min.js" defer async="true"></script>
+
+<script src="/Restructures/assets/js/jquery.min.js"></script>
+<script src="/Restructures/assets/js/baidumap_api.js"></script>
+<script src="/Restructures/effect/js/drivingMap.js"></script>
+<script src="/Restructures/assets/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<script src="/Restructures/effect/js/jquerysession.js"></script>
+<script src="/Restructures/effect/js/swiper.min.js"></script>
+<script src="/Restructures/assets/js/sendMessage.js"></script>
+<script src="/Restructures/assets/js/jweixin-1.0.0.js"></script>
+<script src="/Restructures/effect/js/md5.js"></script>
+<script src="/Restructures/effect/js/dateformart.js"></script>
+
+<!--js效果-->
+<script src="/Restructures/effect/js/public/effect.js"></script>
+<script src="/Restructures/effect/js/weixin/effect.js"></script>
+</body>
+</html>

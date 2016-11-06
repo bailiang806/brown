@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!--<base href="/index_wechat.html">-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>e驾陪</title>
+    <link href="/Restructures/assets/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!--<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>-->
+    <link rel="stylesheet" href="/Restructures/effect/css/weixin.css"/>
+    <link rel="stylesheet" href="/Restructures/effect/css/signmodel.css"/>
+    <link rel="stylesheet" href="/Restructures/effect/css/swiper.min.css"/>
+    <link rel="stylesheet" href="/Restructures/effect/css/weixin/extra.css"/>
+
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row weixin_entrance" ng-init="homepage.initpage()">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#sliderinto01"><img src="/Restructures/imgs/weixinimgs/slider01.jpg" class="img-responsive" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#sliderinto02"><img src="/Restructures/imgs/weixinimgs/slider02.jpg" class="img-responsive" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#sliderinto03"><img src="/Restructures/imgs/weixinimgs/slider03.jpg" class="img-responsive" alt=""></a></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row icon_box">
+            <div class="col-md-6 col-xs-6">
+                <a href="/index_wechat.html/#coachlist"><img src="/Restructures/imgs/weixinimgs/box01.jpg" class="img-responsive" alt=""/></a>
+            </div>
+            <div class="col-md-6 col-xs-6">
+                <a href="/index_wechat.html/#schoollist"><img src="/Restructures/imgs/weixinimgs/box02.jpg" class="img-responsive" alt=""/></a>
+            </div>
+        </div>
+        <div class="row icon_box">
+            <div class="col-md-6 col-xs-6">
+                <a href="/index_wechat.html/#map"><img src="/Restructures/imgs/weixinimgs/box03.jpg" class="img-responsive" alt=""/></a>
+            </div>
+            <div class="col-md-6 col-xs-6">
+                <a href="/index_wechat.html/#aboutus"><img src="/Restructures/imgs/weixinimgs/box04.jpg" class="img-responsive" alt=""/></a>
+            </div>
+        </div>
+        <div class="row icon_box">
+            <div class="col-md-6 col-xs-6">
+                <a href="/index_wechat.html/#coorperation"><img src="/Restructures/imgs/weixinimgs/box05.jpg" class="img-responsive" alt=""/></a>
+            </div>
+            <div class="col-md-6 col-xs-6">
+                <a href="tel:4009606796"><img src="/Restructures/imgs/weixinimgs/box06.jpg" class="img-responsive" alt=""/></a>
+            </div>
+        </div>
+        <div class="row icon_box">
+            <div class="col-md-6 col-xs-6">
+                <a href="/index_wechat.html/#share"><img src="/Restructures/imgs/weixinimgs/box07.jpg" class="img-responsive" alt=""/></a>
+            </div>
+            <div class="col-md-6 col-xs-6">
+                <a href="/index_wechat.html/#studentlogin"><img src="/Restructures/imgs/weixinimgs/box08.jpg" class="img-responsive" alt=""/></a>
+            </div>
+        </div>
+        <div class="row icon_box">
+            <div class="col-md-6 col-xs-6">
+                <a href="/index_wechat.html/#trainingfee"><img src="/Restructures/imgs/weixinimgs/box09.jpg" class="img-responsive" alt=""/></a>
+            </div>
+            <div class="col-md-6 col-xs-6">
+                <a href="/index_campaign.html"><img src="/Restructures/imgs/weixinimgs/box10.jpg" class="img-responsive" alt=""/></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="height:40px;">
+            </div>
+        </div>
+    </div>
+    <div class="row navbar-fixed-bottom">
+        <div class="col-xs-12" style="background-color: #171a1f;height:50px;">
+            <a href="/index_wechat.html/#">
+                <div class="tabbtn" id ="tabbtn1">
+                    <img src="/Restructures/imgs/weixinimgs/icon01_blue.jpg" alt=""/><br>
+                    <span style="color: #00e2ff">首页</span>
+                </div>
+            </a>
+            <a href="/index_wechat.html/#studentlogin">
+                <div class="tabbtn" id ="tabbtn2">
+                    <img src="/Restructures/imgs/weixinimgs/icon02_black.jpg" alt=""/><br>
+                    <span>预约</span>
+                </div>
+            </a>
+            <a href="/index_wechat.html/#consult">
+                <div  class="tabbtn" id="tabbtn3">
+                    <img src="/Restructures/imgs/weixinimgs/icon03_black.jpg" alt=""/><br>
+                    <span>咨询</span>
+                </div>
+            </a>
+            <a href="/index_wechat.html/#domore">
+                <div class="tabbtn" id ="tabbtn4">
+                    <img src="/Restructures/imgs/weixinimgs/icon04_black.jpg" alt=""/><br>
+                    <span>更多</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+<script src="/Restructures/assets/js/jquery.min.js"></script>
+<script src="/Restructures/effect/js/jquerysession.js"></script>
+<script>
+    $(function(){
+        var cityname=remote_ip_info.city;
+
+        if(cityname=="上海市"||cityname=="上海"){
+            $.session.set("location",4);
+        }else if(cityname=="厦门市"||cityname=="厦门"){
+            $.session.set("location",2);
+        }else if(cityname=="福州市"||cityname=="福州"){
+            $.session.set("location",1);
+        }else{
+            $.session.set("location",4);
+        }
+    })
+</script>
+<script src="/Restructures/assets/js/angular.min.js"></script>
+<script src="/Restructures/assets/js/angular_router.min.js"></script>
+<script src="/Restructures/app/weixinapp.js"></script>
+<script src="/Restructures/router/weixinrouter.js"></script>
+<script src="/Restructures/controller/weixincontroller.js"></script>
+<!--filter-->
+<script src="/Restructures/filter/weixinfilter.js" defer async="true"></script>
+<script src="/Restructures/effect/js/angular-sanitize.min.js" defer async="true"></script>
+
+<script src="/Restructures/assets/js/baidumap_api.js"></script>
+<script src="/Restructures/effect/js/drivingMap.js"></script>
+<script src="/Restructures/assets/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<script src="/Restructures/effect/js/swiper.min.js"></script>
+<script src="/Restructures/assets/js/sendMessage.js"></script>
+<script src="/Restructures/assets/js/jweixin-1.0.0.js"></script>
+<script src="/Restructures/effect/js/md5.js"></script>
+<script src="/Restructures/effect/js/dateformart.js"></script>
+
+<!--js效果-->
+<script src="/Restructures/effect/js/public/effect.js"></script>
+<script src="/Restructures/effect/js/weixin/effect.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<div ng-init="pay.payoffinit()">
+    <div class="payoff_box" style="margin-top:15px;width:100%; height:55px;">
+
+        <div class="logo_img" style="position:absolute;left:15px;width:30%;">
+            <img  src={{pay.sdetail.schoolAvator}} style="width:70px; height:70px;">
+        </div>
+        <div class="message" style="position:absolute;left:98px;width:65%;height:80px;">
+            <div class="" style="font-size:18px;"><span>{{pay.sdetail.schoolName}}</span> <span style=" float:right; color:#F39801; margin-right:10px;">￥{{pay.price}}</span></div>
+
+            <div class="" style="margin-top:10px;"><span>{{pay.sdetail.schoolAddress}}</span></div>
+
+        </div>
+    </div>
+    <hr style="border:none; border-top:1px solid #89C0C7; margin-bottom:0px; margin-top:30px;"/>
+    <div style="height:500px;">
+        <div style="text-align:center; color:#A2CBD1; padding-top:5px; padding-bottom:5px; background-color:#F3F9F9;">
+            <span>报名信息</span>
+        </div>
+        <div style="margin-top:15px;">
+            <span style="color:#A2CBD1;">订单编号</span><nobr><span id="oriderid" style="padding-left:5px;">{{pay.orderid}}</span></nobr>
+        </div>
+        <div style="margin-top:10px;">
+            <span style="color:#A2CBD1;">学员姓名</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><input ng-model="wxpay.name" type="text" placeholder="请输入姓名" style="border:none;outline:none;"></span>
+            <hr style="border:none; border-top:1px solid #89C0C7; margin-top:5px; margin-bottom:10px;"/>
+        </div>
+        <div style="margin-top:10px;">
+            <div style="width:70%;float:left; margin-top:15px;">
+                <span style="color:#A2CBD1;">手机号码</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span><input ng-model="wxpay.phone" type="tel" placeholder="请输入手机号" maxlength="11" style="border:none;outline:none;width:100px"></span>
+
+            </div>
+            <div ng-click="wxpay.sendmessage()"style="width:30%;float:left; padding-top:8px; padding-bottom:8px;margin-bottom:5px;background-color:#8FC320; text-align:center; color:#ffffff;">
+                <span>发送验证码</span>
+            </div>
+            <hr style="border:none; border-top:1px solid #89C0C7; margin-bottom:30px; margin-top:5px; clear:both;"/>
+        </div>
+        <div style="margin-top:10px;">
+            <span style="color:#A2CBD1;">验证码</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span><input ng-model="wxpay.verifynum" type="tel" placeholder="请输入验证码" maxlength="6" style="border:none;outline:none;"></span>
+
+        </div>
+
+        <div style="text-align:center;">
+            <hr style="border:none; border-top:1px solid #89C0C7; margin-bottom:15px; margin-top:5px;"/>
+            <span>支付后我们将跟您联系练车事宜</span>
+        </div>
+        <div ng-click="wxpay.payment(pay.sdetail.schoolId,'1')" style="text-align:center; background-color:#8FC320;margin-top:15px; padding-top:8px; padding-bottom:8px; color:#ffffff;">
+            <span>微信支付</span>
+        </div>
+        <span style="display:none" id="rand">{{pay.randomnum}}</span>
+        <div ng-click="wxpay.payment(pay.sdetail.schoolId,'2')" style="text-align:center; background-color:#F39801;margin-top:10px; padding-top:8px;padding-bottom:8px; color:#ffffff;">
+            <span>支付宝支付</span>
+        </div>
+    </div>
+</div>
+

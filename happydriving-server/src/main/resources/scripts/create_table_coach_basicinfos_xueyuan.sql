@@ -1,0 +1,25 @@
+DROP TABLE IF EXISTS `coach_basic_infos_xueyuan`;
+CREATE TABLE `coach_basic_infos_xueyuan` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `urgent_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `urgent_phone` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `address` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `password_digester` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `remember_token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `banji_id` int(11) DEFAULT NULL,
+  `chexing_id` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `phone` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `shenhe` varchar(10) COLLATE utf8_unicode_ci DEFAULT '1',
+  `t1` varchar(10) COLLATE utf8_unicode_ci DEFAULT '1' COMMENT '学车进度',
+  `t2` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `t3` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `t4` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `photo` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `shenfenzheng` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `product_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_coach_basic_infos_on_user_id` (`banji_id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=119 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

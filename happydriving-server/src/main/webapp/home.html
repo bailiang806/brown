@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" ng-app="homeapp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta name="keywords" content="福州,福清,厦门,福州学车,福清学车,厦门学车" />
+    <meta name="description" content="e驾陪是国内最大的O2O学车平台,通过移动互联网技术,e驾陪改变了传统驾校报名学车的模式,为学员营造一个更为良好的学车氛围的同时,也为教练招收学员提供更便捷的平台。" />
+    <title>e驾陪</title>
+    <link href="/Restructures/assets/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="/Restructures/assets/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="/Restructures/effect/css/weixin.css"/>
+    <link rel="stylesheet" href="/Restructures/effect/css/signmodel.css"/>
+    <link rel="stylesheet" href="/Restructures/effect/css/swiper.min.css"/>
+    <link rel="stylesheet" href="/Restructures/effect/css/main.css"/>
+    <link rel="stylesheet" href="/Restructures/effect/css/extra.css"/>
+    <link rel="stylesheet" href="/Restructures/effect/css/showLoading.css"/>
+    <script src="/Restructures/effect/js/home/monitoring.js"></script>
+    <script>
+        window.onload=function(){
+            if(document.documentElement.clientWidth<960){
+              window.location="/index_wechat.html";
+            }
+        }
+    </script>
+</head>
+<body ng-controller="homecontroller">
+<!--<ng-include src="'/Restructures/templates/public/consult.html'"></ng-include>-->
+<div class="container-fluid">
+    <div class="row mainpage">
+        <ng-include src="'/Restructures/templates/public/header.html'"></ng-include>
+        <div ng-view>
+        </div>
+        <ng-include src="'/Restructures/templates/public/footer.html'"></ng-include>
+    </div>
+</div>
+<ng-include src="'/Restructures/models/signin_model.html'"></ng-include>
+<script type="text/javascript" src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+<script src="/Restructures/assets/js/angular.min.js"></script>
+<script src="/Restructures/assets/js/angular_router.min.js"></script>
+<script src="/Restructures/app/homeapp.js"></script>
+<script src="/Restructures/router/homerouter.js"></script>
+<script src="/Restructures/controller/homecontroller.js"></script>
+<script src="/Restructures/assets/js/jquery.min.js"></script>
+<script src="/Restructures/assets/js/baidumap_api.js"></script>
+<script src="/Restructures/effect/js/drivingMap.js"></script>
+<script src="/Restructures/assets/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<script src="/Restructures/effect/js/jquerysession.js"></script>
+<script src="/Restructures/effect/js/swiper.min.js"></script>
+<script src="/Restructures/assets/js/sendMessage.js"></script>
+<script src="/Restructures/effect/js/jquery.transit.js"></script>
+<script src="/Restructures/effect/js/jquery.showLoading.min.js"></script>
+<!--官网js动态效果-->
+<script src="/Restructures/effect/js/public/effect.js"></script>
+<script src="/Restructures/effect/js/home/effect.js"></script>
+</body>
+</html>

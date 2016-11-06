@@ -1,0 +1,56 @@
+<div class="row" style="margin-top:30px;" ng-init="effect.changetab(2)">
+    <div class="col-xs-12 mbody" style="padding-left: 15px;padding-right: 15px;height:300px;">
+        <div style="text-align:center;margin-bottom: 30px; color:#59697F;" ng-keyup=""><h5 id="tile" >目前只有在“蔡塘训练场”和“集美训练场”<br><br>练车的学员才能预约练车哦！</h5></div>
+        <table style="border:none;">
+            <tbody>
+            <tr style="margin-top:20px;height:40px; border:none;">
+               <td style="border-bottom:1px solid #CAE2E6;"><img id="firstimg-up" style="width:15px;" src="/Restructures/imgs/weixinimgs/phone_icon.png" alt=""/></td>
+                <td style="border-bottom:1px solid #CAE2E6; border-right:9px solid #FFFFFF;"><input id="inputup" placeholder="手机号" type="text" maxlength="11"  style="outline:none;padding-left:10px;border:0px;width:100%;height:90%; font-size:14px " ng-keyup="keyup(input)" ng-focus="focus()"  ng-model="login.phone"></td>
+                <td style="border-bottom:1px solid #FFFFFF; color:#ffffff;" ng-click="login.sendmessage()"><div id="btn1" style="background-color: #E1EFF0;padding:8px; margin-top:5px;"><span >发送验证码</span></div></td>
+            </tr>
+            <tr style="height:40px;border-bottom-color:#CAE2E6;">
+                <td><img id="firstimg-down" style="width:15px;" src="/Restructures/imgs/weixinimgs/vrifycode_icon.png" alt=""/></td>
+                <td colspan="2"><input id="inputdown" placeholder="验证码"  maxlength="6"  style="outline:none;border:0px;width:100%;height:90%;padding-left:10px; font-size:14px;" ng-click="click()" ng-keyup="keyup(input)" ng-model="login.verifynum"></td>
+            </tr>
+            </tbody>
+
+        </table>
+        <table style="margin-top:6px;border:0px;">
+            <tbody>
+            <tr style="margin-top:10px;color:#ffffff;border-bottom-width: 0px;height:40px; ">
+                <td ng-click="login.submit()"><div id="btn2" style="background-color: #E1EFF0;padding:8px;"><span>确&nbsp;&nbsp;定</span></div></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row navbar-fixed-bottom">
+    <div class="col-xs-12" style="background-color: #171a1f;height:50px;">
+        <a ng-click="gotoindex()">
+            <div class="tabbtn" id ="tabbtn1">
+                <img src="/Restructures/imgs/weixinimgs/icon01_black.jpg" alt=""/><br>
+                <span>首页</span>
+            </div>
+        </a>
+        <div ng-click="gotoorder()">
+            <div class="tabbtn" id ="tabbtn2">
+                <img src="/Restructures/imgs/weixinimgs/icon02_black.jpg" alt=""/><br>
+                <span style="color: #00e2ff">预约</span>
+            </div>
+        </div>
+        <div ng-click="gotosingin()">
+            <div  class="tabbtn" id="tabbtn3">
+                <img src="/Restructures/imgs/weixinimgs/icon03_black.jpg" alt=""/><br>
+                <span>咨询</span>
+            </div>
+        </div>
+        <div ng-click="gomore()">
+            <div class="tabbtn" id ="tabbtn4">
+                <img src="/Restructures/imgs/weixinimgs/icon04_blue.jpg" alt=""/><br>
+                <span>更多</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+

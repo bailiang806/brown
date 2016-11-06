@@ -1,0 +1,127 @@
+<div class="row"  style="background-image: url('/Restructures/imgs/campaign/bg_login.jpg');height:350px;padding-left:10px;padding-right:10px;" >
+    <!--<div class="col-xs-12">-->
+
+        <!--<table>-->
+            <!--<h4 style="color:#ed695c;">注册为推荐人</h4>-->
+            <!--<tbody>-->
+            <!--<tr>-->
+                <!--<td style="width: 100px;border-right:1px solid #e5e5e5">姓名</td>-->
+                <!--<td colspan="3"><input  ng-model="user.name" type="text"/></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td style="width: 100px;border-right:1px solid #e5e5e5">电话</td>-->
+                <!--<td colspan="3"><input  ng-model="user.phone" type="text"/></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td style="width: 100px;border-right:1px solid #e5e5e5">城市</td>-->
+                <!--<td colspan="3">-->
+                    <!--<select type="text" ng-model="user.city" style="margin-top: 2px;width: 150px;padding-top: 2px;height: 32px;">-->
+                        <!--<option value="1" selected = "selected">福州</option>-->
+                        <!--<option value="2">厦门</option>-->
+                    <!--</select>-->
+                <!--</td>-->
+            <!--<tr>-->
+                <!--<td style="width: 100px;border-right:1px solid #e5e5e5;background-color: #66afe9;color:#ffffff"><button style="background-color:#66afe9;color:#ffffff;border:0px;"  ng-click="user.sendmessage()" >{{user.message}}</button></td>-->
+                <!--<td colspan="3"><input ng-model="user.verifynum" type="text"/></td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+        <!--</table>-->
+
+        <!--<a ng-click="user.register()" >-->
+        <!--<table style="margin-top:6px;background-color:#ed695c;">-->
+            <!--<tbody>-->
+            <!--<tr style="margin-top:20px;">-->
+                <!--<td colspan=2 style="border-right:1px solid #e5e5e5"><span style="color:#FFFFFF">注&nbsp;&nbsp;册</span></td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+        <!--</table></a>-->
+    <!--</div>-->
+
+    <div class="col-md-3 col-md-offset-2" style="height:250px;margin-top:50px;border:1px solid #ffffff;border-radius:5px;">
+
+        <table style="margin:30px auto auto auto;width:90%;">
+            <tbody>
+            <tr>
+                <td><p style="color:#4d4d4d;font-size:16px;margin:0px auto 10px auto"><strong>用户注册</strong></p></td>
+                <td style="text-align: right;padding-right:3px;"><a href="#login">立即登陆</a></td>
+            </tr>
+            <tr style="margin-bottom:6px;">
+                <td style="background-color:#f4f4f4;padding-left:6px;border-bottom:1px solid #ffffff"><span class="glyphicon glyphicon-user"><span style="padding-left:5px;">姓名</span></span></td>
+                <td style="border-bottom:1px solid #ffffff"><input ng-model="user.name" type="tel" style="width:100%;height:32px;opacity:0.5;border:0px;color:#000000"></td>
+            </tr>
+            <tr style="margin-bottom:6px;">
+                <td style="background-color:#f4f4f4;padding-left:6px;border-bottom:1px solid #ffffff"><span class="glyphicon glyphicon-earphone"><span style="padding-left:5px;">电话</span></span></td>
+                <td style="border-bottom:1px solid #ffffff"><input ng-model="user.phone" type="tel" style="width:100%;height:32px;opacity:0.5;border:0px;color:#000000"></td>
+            </tr>
+            <tr>
+                <td style="background-color:#f4f4f4;padding-left:6px;border-bottom:1px solid #ffffff" ng-click="user.sendmessage()" style="background-color:#f4f4f4;padding-left:6px;"><span class="glyphicon glyphicon-send"><span style="padding-left:5px;">验证码</span></span></td>
+                <td style="border-bottom:1px solid #ffffff"><input ng-model="user.verifynum" type="tel" style="width:100%;height:32px;opacity:0.5;border:0px;color:#000000"></td>
+            </tr>
+            <tr >
+                <td style="background-color:#f4f4f4;padding-left:6px;border-bottom:1px solid #ffffff" ng-click="user.sendmessage()" style="background-color:#f4f4f4;padding-left:6px;"><span class="glyphicon glyphicon-flag"><span style="padding-left:5px;">城市</span></span></td>
+                <td style="border-bottom:1px solid #ffffff">
+                    <select type="text" ng-model="user.city" style="width:100%;height:32px;opacity:0.5;border:0px;color:#000000">
+                        <option value="1" selected = "selected">福州</option>
+                        <option value="2">厦门</option>
+                    </select>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="text-center" style="margin:6px auto auto auto;width:90%;height:30px;background-color:#cd6600">
+            <tbody>
+            <tr>
+                <td colspan=2 ng-click="user.register()"  ><span style="color: #ffffff">注&nbsp;&nbsp;册</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+<div class="row text_info" style="background-color: #f4f4f4;padding-top:50px;padding-bottom:50px;color:#4d4d4d">
+    <div class="col-md-8 col-md-offset-2">
+
+        <h4>招募e驾陪推荐人邀请好友报名返利</h4>
+        <p>感谢亲们对e驾陪的支持，从现在开始，只要你的朋友通过你，在e驾陪报名，你都会得到相应的返利哦。
+            是不是有一点小激动呢？赶快加入我们，让我们一起嗨起来！！！</p>
+        <p>成为e驾陪推荐人优势：<br>
+            优势一：服务我们做<br>
+            优势二：无需押金，加盟费，完全0成本<br>
+            优势三：时间不用定点，随心所欲动动手指即可<br>
+            优势四：微信是每个人常用软件，方便、快捷</p>
+        <p>一、推荐人计划：<br>
+            任何e驾陪的用户都可以注册成为【推荐人】，你的朋友通过你分享的链接，在线下单后都会在后台有记录，每月根据累计总额，来结算相应的返利金额。</p>
+        <p>二、销售流程：<br>
+            关注e驾陪<br>
+            ↓<br>
+            申请【成为推荐人】<br>
+            ↓<br>
+            让好友扫二维码并在 “学车咨询” 中提交电话<br>
+            ↓<br>
+            报完名后，后台统计每月联系我们发放饷银</p>
+        <p>三、销售须知：<br>
+            1）一键关注：关注e驾陪>>><br>
+            2）进入首页后点击最下面的【成为推荐人】。<br>
+            3）没注册的需先注册，已注册过的直接登录账号即可。<br>
+            4）登陆后，会自动跳转至需推广的二维码和已推荐过的学员列表，让学员们扫你的二维码。<br>
+            5）学员扫过后会进入官网，让他们在下面的学车咨询里提交手机号即可。<br>
+            6）点击微信右上方【┊】或浏览器的分享按钮，发送给朋友圈/好友们，加上一段诱人的文字，呼唤好友来咨询吧，或者把二维码保存下来，打印出来，或者放到网上。<br>
+            7）点击 “统计数据” 来查看所有你推广的学员。</p>
+        <p>四、注意事项：<br>
+            1）分享二维码时，一定要注意二维码已加载完全，能够扫描成功。<br>
+            2）好友通你的链接访问，在15天内的成功付款完成订单，才可算你的成绩。<br>
+            3）推荐人通过自己的分享链接访问并付款，均不算作推广成绩。<br>
+            4）不同推荐人之间，通过分享链接访问并付款，均算作另一方推荐人的成绩。<br>
+            5）如有退款学员，该学员则不算作推荐人成绩。<br>
+            6）每月结算上月的返利饷银。<br>
+            7）联系我们时请将：【推荐人账号】【提现金额】【转账账号】告知我们，工作时间内，我们收到信息后会及时联系亲们的。</p>
+        <p>联系方式<br>
+            1）联络人：郭经理<br>
+            2）手机：18359777006<br>
+            3）QQ：498610362<br>
+            无论是销售、对账，还是结算问题，请通过以上方式咨询。<p>
+
+    </div>
+
+
+</div>

@@ -1,0 +1,38 @@
+#
+# 各种可能调用的第三方API（测试+demo）
+#
+
+
+
+
+################################ 微信 ################################
++ 获取普通access_token
+    + wiki:
+        + http://mp.weixin.qq.com/wiki/11/0e4b294685f817b95cbed85ba5e82b8f.html
+    + demo:
+        + https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx1e810861e20c0c30&secret=2f89260a28f83cdf3d6b56f91f514482
+
++ 获取JSJDK的jsapi_ticket
+    + wiki:
+        + http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html#.E9.99.84.E5.BD.951-JS-SDK.E4.BD.BF.E7.94.A8.E6.9D.83.E9.99.90.E7.AD.BE.E5.90.8D.E7.AE.97.E6.B3.95
+    + demo:
+        + https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=yPmSoWikxkcgFknZtLI1R4B2lwmeOUI3W51ZRvAy13wm1HydwO9EXDC7LQzE1AFNH-3cCYAjCRMtiJ8pympMbr16euaDHz7T9r8T9ITvmDE&type=jsapi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+################################ Alipay ################################
+
+

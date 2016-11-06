@@ -1,0 +1,30 @@
+<div class="school_box" ng-init="schooldetail.getdetail()" style="border:0;width:100%;">
+    <hr/>
+    <div class="box_img">
+        <img style="" src={{schooldetail.sdetail.schoolAvator}} alt=""/>
+    </div>
+    <div class="box_test">
+        <div class="text_name"><span>{{schooldetail.sdetail.schoolName}}</span></div>
+        <div class="text-address"><span>{{schooldetail.sdetail.schoolAddress}}</span></div>
+    </div>
+</div>
+<div ng-if="schooldetail.sdetail.schoolDetail">
+    <hr>
+    <div class="sdetail_pc_style" style="color:#405266;padding:5px;">
+        <div style="text-align:justify; text-justify:inter-ideograph"><span ng-bind-html="schooldetail.schooldetail"></span></div>
+        <!--<p>{{schooldetail.sdetail.schoolDetail}}</p>-->
+    </div>
+</div>
+<div>
+    <hr>
+    <div style="color:#405266">
+        <h5 style="padding-left:45%">相册</h5>
+    </div>
+    <div class="sdetail_pc_style" style="color:#405266;" ng-repeat="schoolimg in schooldetail.sdetail.schoolImgUrls">
+        <img src={{schoolimg}} style="float:left;width:48%;margin-right:2%;margin-bottom:15px;" alt=""/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12" style="height:50px;">
+    </div>
+</div>

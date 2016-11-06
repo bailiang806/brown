@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:aop="http://www.springframework.org/schema/aop"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:mvc="http://www.springframework.org/schema/mvc"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+
+    <!-- 启动注解驱动的spring mvc功能，注册请求url和注解pojo类方法的映射 -->
+    <mvc:annotation-driven/>
+
+    <mvc:default-servlet-handler/>
+
+    <mvc:resources location="/" mapping="/**"/>
+
+    <!-- 启动包扫描功能，以便注册带有@controller,@service,@repository,@component等注解的类为spring的bean -->
+    <context:component-scan base-package="com.happydriving.rockets"/>
+
+
+
+    <!-- START: AspectJ AOP (必须放到springmvc.xml中, 参考：http://stackoverflow.com/questions/11453530/applicationcontext-not-finding-controllers-for-servlet-context) -->
+    <aop:aspectj-autoproxy />
+    <!-- END: AspectJ AOP -->
+
+
+
+
+    <!--
+    <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"/>
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>
+    -->
+
+    <!-- 	<mvc:interceptors> -->
+    <!-- ecp exception intercepter -->
+    <!-- 		<bean class="nc.web.es.fw.handler.EcpExceptionInterceptor"></bean> -->
+    <!-- 	</mvc:interceptors> -->
+
+    <!-- 对模型视图名称的解析 -->
+    <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/Restructures/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!-- spring upload max 1M -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="10485760"/>
+    </bean>
+
+    <bean id="exceptionHandler" class="com.happydriving.rockets.server.common.CommonExceptionHandler"/>
+
+    <!-- 需要写**, 以保证在其下面的子路径均可以被拦截到。比如:/student/a/b/c -->
+    <!--
+<mvc:interceptors>
+    <mvc:interceptor>
+        <mvc:mapping path="/coach/**"/>
+        <mvc:exclude-mapping path="/coach/**/public/**"/>
+        <bean class="com.happydriving.rockets.server.common.CoachLoginInterceptor"/>
+    </mvc:interceptor>
+    <mvc:interceptor>
+        <mvc:mapping path="/student/**"/>
+        <bean class="com.happydriving.rockets.server.common.StudentLoginInterceptor"/>
+    </mvc:interceptor>
+    <mvc:interceptor>
+        <mvc:mapping path="/wxpay/**"/>
+        <mvc:mapping path="/alipay/**"/>
+        <mvc:mapping path="/geolocation/**"/>
+
+        <mvc:exclude-mapping path="/wxpay/**/public/**"/>
+        <mvc:exclude-mapping path="/alipay/**/public/**"/>
+        <mvc:exclude-mapping path="/geolocation/**/public/**"/>
+
+        <bean class="com.happydriving.rockets.server.common.StudentLoginInterceptor"/>
+    </mvc:interceptor>
+</mvc:interceptors>
+    -->
+
+</beans>

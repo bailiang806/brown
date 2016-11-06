@@ -1,0 +1,11 @@
+<div class="row" ng-init="pay.choosepaytype()">
+    <div class="col-xs-12">
+        姓名: <input type="text"/><br>
+        手机号: <input type="text"/><br>
+        场地名:{{pay.schoolname}}<br>
+        款项:{{pay.payment}}<br>
+        <a ng-click="wxpay.paytest()">微信支付</a>
+        <a id="wxpay" style="display:none"></a>
+        <a ng-click="alipay.paytest()" id="alipay" class="btn btn-info">支付宝支付</a>
+    </div>
+</div>

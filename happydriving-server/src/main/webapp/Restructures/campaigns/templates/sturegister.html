@@ -1,0 +1,39 @@
+<div class="row" style="margin-top:30px;" >
+    <div class="col-xs-12 mbody">
+
+        <table>
+            <h4 style="color:#ed695c;">学员报名</h4>
+            <tbody>
+            <tr>
+                <td style="width: 100px;border-right:1px solid #e5e5e5">姓名</td>
+                <td colspan="3"><input  ng-model="user.name" type="text"/></td>
+            </tr>
+            <tr>
+                <td style="width: 100px;border-right:1px solid #e5e5e5">电话</td>
+                <td colspan="3"><input  ng-model="user.phone" type="text"/></td>
+            </tr>
+            <tr>
+                <td style="width: 100px;border-right:1px solid #e5e5e5">城市</td>
+                <td colspan="3">
+                    <select type="text" ng-model="user.city" style="margin-top: 2px;width: 150px;padding-top: 2px;height: 32px;">
+                        <option value="1" selected = "selected">福州</option>
+                        <option value="2">厦门</option>
+                    </select>
+                </td>
+            <tr>
+                <td style="width: 100px;border-right:1px solid #e5e5e5;background-color: #66afe9;color:#ffffff">发送验证码</td>
+                <td colspan="3"><input  ng-model="user.verifynum" type="text"/></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <a ng-click="user.register()">
+        <table style="margin-top:6px;background-color:#ed695c;">
+            <tbody>
+            <tr style="margin-top:20px;">
+                <td colspan=2 style="border-right:1px solid #e5e5e5"><span  style="color:#FFFFFF">报&nbsp;&nbsp;名</span></td>
+            </tr>
+            </tbody>
+        </table></a>
+    </div>
+</div>

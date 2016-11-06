@@ -1,0 +1,52 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+ul li{
+    list-style:none;
+}
+
+.pc_nav ul li{
+    float: right;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.sidenav{
+    margin-top:50px;
+    margin-left:20px;
+}
+
+.sidenav li{
+    padding-top:5px;
+}
+
+.sidenav li label{
+    left: 0px;
+}
+
+.sidenav li a{
+    color:azure;
+    /*font-size:1.2em;*/
+}
+
+.navicon label {
+    color: white; font: bold 12px Montserrat; text-align: center;
+    border: 2px solid white; border-radius: 4px;
+    display: block; padding: 10px 0;
+    width:20%; position: absolute; left:10%;top:20px;
+    cursor: pointer; text-transform: uppercase;
+}
+.mainpage{
+    transition: all 0.4s
+}
+#tm:checked ~ .mainpage {transform: translateX(200px);}
+
+.citylist{
+    list-style: none;
+}
+.citylist li{
+    float:left;
+    padding:5px 30px 30px 5px;
+}

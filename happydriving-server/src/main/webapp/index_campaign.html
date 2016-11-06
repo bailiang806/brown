@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="campaignapp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+    <META HTTP-EQUIV="expires" CONTENT="0">
+
+    <link href="http://cdn.gbtags.com/twitter-bootstrap/3.2.0/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="/Restructures/effect/css/campmain.css"/>
+    <link rel="stylesheet" href="/Restructures/effect/css/showLoading.css"/>
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <title>e驾陪登陆</title>
+</head>
+<script>
+    $(function () {
+        var height=$(window).height();
+        var width=$(window).width();
+        $("#mbody").css({"height":height,"width":width*0.9});
+    })
+</script>
+<body ng-controller="campaigncontroller">
+<div class="container-fluid">
+    <div ng-view></div>
+</div>
+
+<div class="container-fluid">
+    <div class="row" >
+        <div class="col-md-12" >
+            <div class="modal fade" id="updatestu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="modal-content" style="margin-top:90px;">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-right: 10px;margin-top: 10px;"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row modal-body sign_model">
+                                            <div class="row">
+                                                <div class="col-xs-10 col-xs-offset-1 " >
+                                                    <div class="row">
+                                                        <div class="col-xs-12 mbody">
+                                                           <div class="row">
+                                                               <div class="col-md-12">
+                                                                   <label style="margin-right:10px;">是否转化?</label>
+                                                                   <label>
+                                                                       <input type="radio" name="transform" value="是" ng-model="manage.istansform">
+                                                                       是
+                                                                   </label>
+                                                                   <label>
+                                                                       <input type="radio" name="transform" value="否" ng-model="manage.istansform">
+                                                                       否
+                                                                   </label>
+                                                               </div>
+                                                           </div>
+
+                                                            <div class="row" style="margin-top: 10px;">
+                                                                <div class="col-md-12">
+                                                                        <label>回访记录</label>
+                                                                        <input id="comment" type="text" ng-model="manage.comment" class="form-control">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row" style="margin-top: 10px;">
+                                                                <div class="col-md-12">
+                                                                    <input class="btn btn-primary btn-sm" type="button" value="更新" ng-click="manage.updatestatus()">
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="http://cdn.gbtags.com/angular.js/1.2.20/angular.min.js"></script>
+<script src="http://cdn.gbtags.com/angular.js/1.2.20/angular-route.min.js"></script>
+<script src="/Restructures/campaigns/campaignapp.js"></script>
+<script src="/Restructures/campaigns/campaigncontroller.js"></script>
+<script src="/Restructures/campaigns/campaignrouter.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/Restructures/effect/js/jquerysession.js"></script>
+<script src="/Restructures/effect/js/dateformart.js"></script>
+<script src="/Restructures/assets/js/sendMessage.js"></script>
+<script src="/Restructures/effect/js/jquery.showLoading.min.js"></script>
+
+</body>
+</html>

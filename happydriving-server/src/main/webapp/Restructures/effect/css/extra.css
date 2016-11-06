@@ -1,0 +1,26 @@
+.index_style > div{padding-top:50px;padding-bottom: 50px;}
+.img_box{padding-top:0px;}
+.index_style h4{margin-bottom:5px;margin-top:5px;}
+.index_style span{font-size:13px;}
+.wechat_inc{padding-top:50px;}
+
+.citycanclick{color: #575757}
+/*img{width:100%}*/
+@media screen and (min-width:2560px){
+    .container-fluid{width:1280px;}
+    .signinfo{width:1280px;margin:auto;}
+}
+
+a{text-decoration:none;}
+a:link{
+    text-decoration:none;
+}
+a:visited{
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:none;
+}
+a:active{
+    text-decoration:none;
+}

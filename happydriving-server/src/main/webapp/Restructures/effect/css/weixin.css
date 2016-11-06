@@ -1,0 +1,83 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-weight: 100;
+    list-style: none;
+    font-family: Microsoft Yahei, sans-serif;
+}
+
+body{
+    font-family: Microsoft Yahei, sans-serif;
+    color: #3d516a;
+}
+.container-fluid{
+    overflow-x:hidden;
+}
+
+.citylist{
+    list-style: none;
+}
+.citylist li{
+    float:left;
+    padding:5px 20px 20px 5px;
+}
+
+.school_box{margin-bottom:88px;}
+.school_box hr{margin-bottom: 9px;margin-top:0px;color:#3d516a;}
+.box_img{position: absolute;left:10px;float: left;}
+.box_img img{width:70px;height:70px;}
+.next_icon{position: absolute;right:10px;float:right;}
+.next_icon img{width:5px;margin-top:30px;}
+.box_test{position: absolute;left:90px;heifht:80px;float: left;margin-right:50px;}
+.school_box a{margin-bottom:10px;color:#3c506b;font-size:13px;}
+/*.text-address a{color:#3c506b;font-size:13px;}*/
+.text-address{margin-top:5px;}
+
+.text-address_school a{color:#3c506b;font-size:13px;}
+/*.text-address_school{margin-top:30px;}*/
+
+
+.logininput::-webkit-input-placeholder{
+    color:#C8E2E3;
+}
+.logininput::-moz-placeholder{
+   color:#C8E2E3;
+}
+
+
+
+.content_text{background-color: #f4f4f4}
+.content_text div p{margin-top:10px;}
+
+.con_title{color: #89c0c5}
+
+.fluidimg{margin:0px;padding:0px;}
+.fluidimg div{margin:0px;padding:0px;}
+.fluidimg div img{margin:0px;padding:0px;}
+#inputup::-webkit-input-placeholder { /* WebKit browsers */
+    color:#CCE3E5;
+}
+#inputup:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#CCE3E5;
+}
+#inputup::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#CCE3E5;
+}
+#inputup:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#CCE3E5;
+}
+#inputdown::-webkit-input-placeholder { /* WebKit browsers */
+    color:#CCE3E5;
+}
+#inputdown:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#CCE3E5;
+}
+#inputdown::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#CCE3E5;
+}
+#inputdown:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#CCE3E5;
+}
+/*.courselist div hr{margin-top:5px;margin-bottom: 5px;}*/
+
+

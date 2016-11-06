@@ -1,0 +1,32 @@
+<div class="school_box" ng-init="coachdetail.getdetail()">
+    <hr/>
+    <div class="box_img">
+        <img style="" src="{{coachdetail.cdetail.coachAvator}}" alt=""/>
+    </div>
+    <div class="box_test">
+        <div class="text_name"><span style="font-size:15px">{{coachdetail.cdetail.coachName}}</span></div>
+        <div class="text-address"><span style="font-size:12px;color:#89c0c7">{{coachdetail.cdetail.schoolName}}</span></div>
+        <div class="text-address"><span style="font-size:12px">教过{{coachdetail.cdetail.studentCount}}个学员,通过率{{coachdetail.cdetail.passingRate}}%</span></div>
+    </div>
+</div>
+<div ng-if="coachdetail.cdetail.coachDetail">
+    <hr>
+    <div style="color:#405266">
+        <p>{{coachdetail.cdetail.coachDetail}}</p>
+    </div>
+</div>
+<div class="coachdetaillist">
+    <hr>
+    <div style="color:#405266">
+        <h5 style="padding-left:45%">相册</h5>
+    </div>
+    <div ng-repeat="coachimg in coachdetail.cdetail.coachImgUrl">
+        <div>
+            <img src={{coachimg}} style="width:100%;margin-bottom:20px;" alt=""/>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12" style="height:50px;">
+    </div>
+</div>

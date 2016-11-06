@@ -1,0 +1,78 @@
+<div class="=row visible-lg-block visible-md-block" ng-init="map.loading()">
+    <div class="col-md-12">
+        <div class="row map_btn">
+
+         <div class="col-md-1 col-md-offset-1">
+             <a href="" ><label class="citybutn">成都</label></a>
+         </div>
+         <div class="col-md-1">
+             <a href="" ><label class="citybutn">重庆</label></a>
+         </div>
+         <div class="col-md-1">
+             <a href="" ><label class="citybutn">北京</label></a>
+         </div>
+         <div class="col-md-1">
+             <a href="" ><label class="citybutn">深圳</label></a>
+         </div>
+         <div class="col-md-1">
+             <a href="" ng-click="map.switch('4')"><label class="citybutn citycanclick" id="city4">上海</label></a>
+         </div>
+         <div class="col-md-1">
+             <a href="" ng-click="map.switch('2')"><label class="citybutn citycanclick" id="city2">厦门</label></a>
+         </div>
+         <div class="col-md-1">
+             <a href="" ng-click="map.switch('1')"><label class="citybutn citycanclick" id="city1">福州</label></a>
+         </div>
+
+         <div class="col-md-1">
+             <a href=""><label class="citybutn">杭州</label></a>
+         </div>
+         <div class="col-md-1">
+             <a href=""><label class="citybutn">苏州</label></a>
+         </div>
+         <div class="col-md-1">
+             <a href=""><label class="citybutn">南京</label></a>
+         </div>
+     </div>
+    </div>
+</div>
+
+<div class="row visible-xs-block visible-sm-block" style="height:30px;margin-top:10px;" ng-init="map.loading()">
+    <div class="col-xs-2 col-xs-offset-1"><a href=""><span></span></a></div>
+    <div class="col-xs-2"><a href="" ng-click="map.switch('2')"><span>厦门</span></a></div>
+    <div class="col-xs-2"><a href="" ng-click="map.switch('1')"><span>福州</span></a></div>
+    <div class="col-xs-2"><a href="" ng-click="map.switch('4')"><span>上海</span></a></div>
+    <div class="col-xs-2"><a href="" ><span></span></a></div>
+    <div class="col-xs-2 col-xs-offset-1"><a href=""><span></span></a></div>
+    <div class="col-xs-2"><a href=""><span></span></a></div>
+    <div class="col-xs-2"><a href=""><span></span></a></div>
+    <div class="col-xs-2"><a href=""><span></span></a></div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" class="drivingMap" id="drivingMap" ng-init="map.initmap()">
+    </div>
+</div>
+
+<!--绝对布局-->
+<div   ng-init="school.loadschoolinfo()">
+    <div class="school_box" id="loadingschools" ng-repeat="school in school.schoolinfo">
+        <div class="box_img">
+            <a href="#schooldetail/{{school.schoolId}}"><img style="" src={{school.schoolAvator}} alt=""/></a>
+        </div>
+        <a href="#schooldetail/{{school.schoolId}}">
+            <div class="box_test">
+                <div class="text_name"><span style="font-size:15px;">{{school.schoolName}}</span></div>
+                <div class="text-address_school"><span style="color:#89c0c7">{{school.schoolAddress}}</span></div>
+                <div class="text-product"><span style="font-size:13px;">{{school.summary}}</span></div>
+            </div>
+        </a>
+        <div class="next_icon">
+            <a href="#schooldetail/{{school.schoolId}}"><img  src="/Restructures/imgs/weixinimgs/icon_next.png" alt=""/></a>
+        </div>
+    </div>
+</div>
+
+
+
+

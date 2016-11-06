@@ -1,0 +1,70 @@
+<!--pc端导航条-->
+<div class="row visible-lg-block visible-md-block pc_nav">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row text-center">
+                    <div class="col-md-2 " style="margin-top:0px;">
+                        <a href="#"><img src="/Restructures/imgs/index/logo2.png" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 "><a class="ladda-button navtext" href="#">首页</a></div>
+                    <div class="col-md-2 " ><a class="ladda-button navtext"href="#product">产品介绍</a></div>
+                    <div class="col-md-2 "><a href="#fuzhoumap" class="navtext">场地</a></div>
+                    <div class="col-md-2 "><a href="#aboutus" class="navtext">关于我们</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--移动端咨询按钮-->
+<div class="row visible-xs-block visible-sm-block navbar-fixed-bottom signin_btn">
+    <div class="col-xs-12">
+        <a ng-click="user.showmodel()"><img  src="/Restructures/imgs/weixinimgs/btm_btn.png" class="img-responsive" alt=""/></a>
+    </div>
+</div>
+<!--移动端导航条-->
+<div class="row visible-xs-block visible-sm-block mb_nav">
+    <div class="col-xs-10 col-xs-offset-1 mobile_nav_list">
+        <div class="row">
+            <div class="col-xs-3">
+                <img src="/Restructures/imgs/index/logo2.png" class="img-responsive" >
+            </div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-2 text-center">
+                <span ><a href="#">首页</a></span>
+            </div>
+            <div class="col-xs-2 text-center">
+                <span><a href="#product">产品</a></span>
+            </div>
+            <div class="col-xs-2 text-center">
+                <span><a href="#fuzhoumap">场地</a></span>
+            </div>
+            <div class="col-xs-2 text-center">
+                <span><a href="#aboutus">关于</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row signinfo visible-lg-block visible-md-block navbar-fixed-top">
+    <div style="width:70%;margin:5px auto 5px auto">
+        <table class="infobox_style" style="margin-left: 80px;margin-right:80px;">
+            <tr>
+                <td style="width:10%;"><input style="width:100%;font-size: 12px;" type="text" placeholder="姓名" ng-model="user.name"/></td>
+                <td style="width:1%;"></td>
+                <td style="width:10%;"><input style="width:100%;font-size: 12px;" type="text" placeholder="电话" ng-model="user.phone"/></td>
+                <td style="width:1%;"></td>
+                <td style="background-color: #FFFFFF;width:10%;">
+                    <select ng-model="user.city" type="text" style="font-size: 12px;border:0px;width:100%;height:100%">
+                        <option value="1" selected = "selected">福州</option>
+                        <option value="2">厦门</option>
+                        <option value="4">上海</option>
+                    </select>
+                </td>
+                <td style="width:1%;"></td>
+                <td style="background-color: #ffffff;width:10%;"><input ng-click="user.signin()" style="border:0px;width:100%;height:100%;text-align: center;font-size:12px;" type="button" value="提交咨询"/></td>
+                <td style="text-align:right;color: #ffffff;font-size:12px;"><span>另可致电客服:4009-606-796</span></td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="row" ng-init="mystu.initmystu()">
+    <div class="col-xs-8 col-xs-offset-2" style="margin-top:20px;">
+        <span style="margin-bottom: 0px;margin-left: 11px;margin-right:20px;">长按二维码,保存到本地</span><input ng-click="update_generateCode(mystu.reffid)" type="button" value="重新生成二维码"/>
+        <div id="generateCode_box" style="padding:10px;">
+
+        </div>
+        <!--<img class="img-responsive" src="http://www.ejiapei.com/images/generateCode/{{mystu.reffid}}.jpg"/>-->
+        <!--<img class="img-responsive" src="http://www.ejiapei.com/images/generateCode/1239.jpg"/>-->
+    </div>
+</div>
+<div class="row" style="margin-top:10px;">
+    <div class="col-xs-12 mbody">
+        <table style="width:100%;">
+            <thead>
+            <tr>
+                <td>姓名</td>
+                <td>电话</td>
+                <td>是否转化</td>
+                <td>推荐时间</td>
+            </tr>
+            </thead>
+
+            <tbody stu_tb ng-repeat="student in mystu.mystulist">
+            <tr>
+                <td>{{student.name}}</td>
+                <td>{{student.phone}}</td>
+                <td>{{student.isTransfer}}</td>
+                <td>{{student.createdAt}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,95 @@
+<div class="container-fluid">
+    <div class="row" >
+        <div class="col-md-12" >
+            <div class="modal fade" id="order" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <div class="modal-content">
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-right:10px; margin-top:5px;"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row modal-body sign_model" style="height:135px;">
+                                            <div class="row" style="margin-top:0px;">
+                                                <div class="col-xs-10 col-xs-offset-1 text-center" style="padding-bottom:10px;">
+                                                    <span >确定约 <span id="coursedateinfo"></span>的课程吗?</span>
+                                                        <p><span>两天以内的预约课程将无法取消</span></p>
+                                                    <span id="courseidtext" style="display: none"></span>
+
+                                                </div>
+                                            </div>
+                                            <hr style=" border:none; border-top:1px solid #C3DFE3; margin-bottom:0px; "/>
+                                            <div class="row">
+                                                <div class="col-xs-6 text-center " style="border-right:1px solid #C3DFE3; height:44px; padding-top:15px;" ng-click="order.isorder('N')">
+                                                    <span>不约</span>
+                                                </div>
+                                                <div class="col-xs-6 text-center"  style="height:45px; padding-top:15px;"  ng-click="order.isorder('Y')">
+                                                   <span>约!</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row" >
+        <div class="col-md-12" >
+            <div class="modal fade" id="cancelcourse" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="modal-content">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-right: 10px;margin-top: 10px;"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="height:110px;">
+                                    <div class="col-md-12">
+                                        <div class="row modal-body sign_model" style="height:105px;">
+                                            <div class="row">
+                                                <div class="col-xs-10 col-xs-offset-1 text-center" style="padding-bottom:10px;">
+                                                    <span>要取消<span id="cancelinfo"></span>的课程?</span>
+                                                    <span id="cancelid" style="display: none"></span>
+
+                                                </div>
+
+                                            </div>
+                                            <hr  style=" border:none; border-top:1px solid#C3DFE3; margin-bottom:0px; "/>
+                                            <div class="row">
+                                                <div class="col-xs-6 text-center" style="border-right:1px solid #C3DFE3; height:44px; padding-top:15px;"  ng-click="order.cancelcourse('N')">
+                                                 <span>取消</span>
+                                                </div>
+                                                <div class="col-xs-6 text-center" style="height:45px; padding-top:15px;"  ng-click="order.cancelcourse('Y')">
+                                                 <span>确定</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,398 @@
+<div class="row" ng-init="city.setcurrentcity()">
+    <div class="col-md-12 index_style">
+        <div class="row" style="padding-top:0px;padding-bottom: 0px;">
+            <!--移动端轮播图-->
+            <div class="col-xs-12 visible-xs-inline">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#sliderinto01"><img src="/Restructures/imgs/weixinimgs/slider01.jpg" class="img-responsive" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#sliderinto02"><img src="/Restructures/imgs/weixinimgs/slider02.jpg" class="img-responsive" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#sliderinto03"><img src="/Restructures/imgs/weixinimgs/slider03.jpg" class="img-responsive" alt=""></a></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <!--pc端轮播图-->
+            <div class="col-md-12 hidden-xs">
+                <img src="/Restructures/imgs/index/slider01.jpg" style="width:100%" class="img-responsive"alt=""/>
+            </div>
+        </div>
+
+
+
+        <div class="row" style="background-color: #fbfcfc">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="row feature">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="row">
+                            <div class="col-md-6 col-xs-12 text-left">
+                                <p>· 免费教练匹配，找到最近的教练</p>
+                                <p>· 先试学再签约，找到喜爱的教练</p>
+                                <p>· 提前预约练车，感受便捷的服务</p>
+                            </div>
+                            <div class="col-md-6 col-xs-12 text-right">
+                                <p>· 钱款分期付给教练，保证积极教学</p>
+                                <p>· 杜绝教练吃拿卡要，让您放心学车</p>
+                                <p>· 全程客服陪同，让您学车安心无忧</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center pro_tag">
+                    <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" style="padding-left:0px;padding-right:0px;">
+                        <div class="col-md-3 col-xs-6">
+                            <img src="/Restructures/imgs/index/newpro01.png" class="center-block img-responsive " alt=""/>
+                            <span>网上预约<br>练车无需等待</span>
+                        </div>
+                        <div class="col-md-3 col-xs-6">
+                            <img src="/Restructures/imgs/index/newpro02.png" class="center-block img-responsive" alt=""/>
+                            <span>全程客服陪同<br>让您安心无忧</span>
+                        </div>
+                        <div class="col-md-3 col-xs-6">
+                            <img src="/Restructures/imgs/index/newpro03.png" class="center-block img-responsive" alt=""/>
+                            <span>学员教练匹配服务<br>轻松拿驾照</span>
+                        </div>
+                        <div class="col-md-3 col-xs-6">
+                            <img src="/Restructures/imgs/index/newpro04.png" class="center-block img-responsive" alt=""/>
+                            <span>高通过率<br>学车事半功倍</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <h4>家门口的练车场</h4>
+                        <span style="">发现离家近的场地</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="row m_inc">
+                                    <div class="col-md-4 text-center"  ng-repeat="nearschool in index_data.nearestlist">
+                                        <a href="#schooldetail/{{nearschool.schoolId}}"><img src={{nearschool.imgURL}} alt="" class="img-responsive"/>
+                                        <div style="position: absolute;bottom:0px;text-align:center;width:90%;color:#ffffff;height:20%;">
+                                            <p style="font-size:16px;">{{nearschool.schoolName}}</p>
+                                            <p style="font-size:12px;">{{nearschool.schoolAddress}}</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="row schoolall">
+                                    <a href="#fuzhoumap">
+                                        <div  class="col-md-4 col-md-offset-4 text-center" style="padding:10px;color:#ffffff;background-color:#89c0c7" >
+                                            <p style="font-size:15px;">查看所有场地</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-bottom:30px;">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <span>或者您可以...</span>
+                        <h4>搜罗全市热门场地</h4>
+                    </div>
+                </div>
+
+                <div class="row schoollist">
+                    <div class="col-md-8 col-md-offset-2 ">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="row m_inc">
+                                    <div class="col-md-4 text-center"  ng-repeat="majorschool in index_data.majorlist">
+                                        <a href="#schooldetail/{{majorschool.schoolId}}"><img src={{majorschool.imgURL}} alt="" class="img-responsive"/>
+                                        <div style="position: absolute;bottom:0px;text-align:center;width:90%;color:#f1f1f1;height:20%;">
+                                            <p style="font-size:16px;">{{majorschool.schoolName}}</p>
+                                            <p style="font-size:12px;">{{majorschool.schoolAddress}}</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="row" style="background-image: url('/Restructures/imgs/index/bag_white.jpg');">
+            <div class="col-md-12 col-lg-12">
+                <div class="row" style="margin-bottom:30px;">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <span>您还可以...</span>
+                        <h4>随心选择您喜欢的教练</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="row text-center m_inc sname">
+                                    <div class="col-md-3 col-xs-3">
+                                        <img src="/Restructures/imgs/index/coach01.jpg" class="center-block img-responsive" alt=""/>
+                                        <span>王宜方</span>
+                                    </div>
+                                    <div class="col-md-3 col-xs-3">
+                                        <img src="/Restructures/imgs/index/coach02.jpg" class="center-block img-responsive"  alt=""/>
+                                        <span>杨振先</span>
+                                    </div>
+                                    <div class="col-md-3 col-xs-3">
+                                        <img src="/Restructures/imgs/index/coach03.jpg" class="center-block img-responsive" alt=""/>
+                                        <span>刘佳乐</span>
+                                    </div>
+                                    <div class="col-md-3 col-xs-3">
+                                        <img src="/Restructures/imgs/index/coach04.jpg" class="center-block img-responsive" alt=""/>
+                                        <span>杨文锦</span>
+                                    </div>
+                                    <div class="col-md-3 col-xs-3">
+                                        <img src="/Restructures/imgs/index/coach05.jpg" class="center-block img-responsive" alt=""/>
+                                        <span>郑峰</span>
+                                    </div>
+                                    <div class="col-md-3 col-xs-3">
+                                        <img src="/Restructures/imgs/index/coach06.jpg" class="center-block img-responsive"  alt=""/>
+                                        <span>陈鸿琳</span>
+                                    </div>
+                                    <div class="col-md-3 col-xs-3">
+                                        <img src="/Restructures/imgs/index/coach07.jpg" class="center-block img-responsive" alt=""/>
+                                        <span>张观博</span>
+                                    </div>
+                                    <div class="col-md-3 col-xs-3">
+                                        <img src="/Restructures/imgs/index/coach08.jpg" class="center-block img-responsive" alt=""/>
+                                        <span>朱杰</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row text-center">
+                                <div class="row schoolall" style="padding-left: 15px;padding-right: 15px;">
+                                    <div class="col-md-4 col-md-offset-4 text-center" style="color:#ffffff;background-color:#89c0c7" >
+                                        <p style="padding:10px;font-size:15px;">查看所有教练</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 col-md-offset-4 text-center">
+                                        <p style="margin-top:10px;font-size:13px;">最好的教练，最好的服务</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row visible-md-block visible-lg-block" style="padding-top:0px;padding-bottom: 0px;">
+            <a href="" ng-click="user.showmodel()">
+                <div class="col-md-12">
+                    <img src="/Restructures/imgs/index/banner-center.jpg" class="center-block img-responsive" alt=""/>
+                </div>
+            </a>
+        </div>
+
+        <div class="row visible-xs-block visible-sm-block">
+            <a href="" ng-click="user.showmodel()">
+                <div class="col-md-12">
+                    <img src="/Restructures/imgs/index/banner-center_mb.jpg" class="center-block img-responsive" alt=""/>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <p style="font-size:16px;margin-bottom: 30px;">我们的平台</p>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="row m_inc">
+                            <div class="col-md-4 col-xs-4">
+                                <a href="" ng-click="user.showmodel()">
+                                    <img src="/Restructures/imgs/index/platform_int01.jpg" class="center-block img-responsive" alt=""/>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-xs-4">
+                                <img src="/Restructures/imgs/index/platform_int02.jpg" class="center-block img-responsive" alt=""/>
+                            </div>
+                            <div class="col-md-4 col-xs-4">
+                                <img src="/Restructures/imgs/index/platform_int03.jpg" class="center-block img-responsive" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row" style="background-color:#3d516b;">
+            <div class="col-md-8 col-md-offset-2">
+
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <p style="font-size:16px;color:#ffffff;margin-bottom: 30px;">以信任为基础的平台</p>
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
+                    <div class="row text-center stand">
+                        <div class="col-md-4 col-xs-4">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2 col-xs-12 col-xs-offset-0">
+                                    <img src="/Restructures/imgs/index/icon03.jpg" class="center-block img-responsive" alt=""/>
+                                    <p class="stand">手机验证</p>
+                                    <p class="stand_next">使用您的手机号码登录<br>以验证您的身份</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-4">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2 col-xs-12 col-xs-offset-0">
+                                    <img src="/Restructures/imgs/index/icon02.jpg" class="center-block img-responsive" alt=""/>
+                                    <p class="stand">可信赖的服务</p>
+                                    <p class="stand_next">维护e驾陪平台的信任和安全<br>是我们的首要任务</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-4">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2 col-xs-12 col-xs-offset-0">
+                                    <img src="/Restructures/imgs/index/icon01.jpg" class="center-block img-responsive" alt=""/>
+                                    <p class="stand">安全支付</p>
+                                    <p class="stand_next">微信和支付宝付款<br>将面向各地用户开通</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <p style="font-size:16px;margin-bottom: 30px;">关注e驾陪</p>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="row m_inc codepic">
+                            <div class="col-md-4  col-xs-4 text-center">
+                                <p>e驾陪教练</p>
+                                <img src="/Restructures/imgs/index/codepic01.jpg" class="center-block img-responsive" alt=""/>
+                            </div>
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <p>e驾陪</p>
+                                <img src="/Restructures/imgs/index/codepic02.jpg" class="center-block img-responsive" alt=""/>
+                            </div>
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <p>e驾陪学车</p>
+                                <img src="/Restructures/imgs/index/codepic03.jpg" class="center-block img-responsive" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row" style="background-color:#161d26;">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="row text-center map_style">
+                    <div class="col-md-6 col-md-offset-3">
+                        <p>全国各大城市</p>
+                        <p style="font-size: 12px;">落足本地，拓展全国</p>
+                    </div>
+                </div>
+
+                <div class="row text-center map_style">
+                    <div class="col-md-6 col-md-offset-3">
+                        <img src="/Restructures/imgs/index/map.jpg" class="center-block img-responsive" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row map_space" style="background-color:#161d26;">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-1 col-md-offset-1 visible-lg-block visible-md-block">
+                        <a href="" ><label class="citybutn_new">成都</label></a>
+                    </div>
+                    <div class="col-md-1 visible-lg-block visible-md-block">
+                        <a href="" ><label class="citybutn_new">重庆</label></a>
+                    </div>
+                    <div class="col-md-1 visible-lg-block visible-md-block">
+                        <a href="" ><label class="citybutn_new">北京</label></a>
+                    </div>
+                    <div class="col-md-1 col-xs-3">
+                        <a href="" ><label class="citybutn_new">深圳</label></a>
+                    </div>
+                    <div class="col-md-1 col-xs-3">
+                        <a href="" ng-click="index_effect.changeshaopinfo(4)"><label style="color:#ffffff;" class="citybutn_new"  class="citybutn_new" id="shanghai">上海</label></a>
+                    </div>
+                    <div class="col-md-1 col-xs-3">
+                        <a href="" ng-click="index_effect.changeshaopinfo(2)"><label style="color:#ffffff" class="citybutn_new" id="xiamenbtn">厦门</label></a>
+                    </div>
+                    <div class="col-md-1 col-xs-3">
+                        <a  href="" ng-click="index_effect.changeshaopinfo(1)"><label style="color:#ffffff;background-color:#01e2ff" class="citybutn_new" id="fuzhoubtn">福州</label></a>
+                    </div>
+                    <div class="col-md-1 visible-lg-block visible-md-block">
+                        <a href=""><label class="citybutn_new">杭州</label></a>
+                    </div>
+                    <div class="col-md-1 visible-lg-block visible-md-block">
+                        <a href=""><label class="citybutn_new">苏州</label></a>
+                    </div>
+                    <div class="col-md-1 visible-lg-block visible-md-block">
+                        <a href=""><label class="citybutn_new">南京</label></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8 col-md-offset-2">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="row  shopinfo">
+                            <div class="col-md-6 shopinfo-left">
+                            </div>
+                            <div class="col-md-6 shopinfo-right">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" >
+                        <div class="col-md-10 col-md-offset-1 text-center" style="margin-top:30px;margin-bottom:30px;background-color: #01e2ff;color:#ffffff;">
+                             <p style="padding:10px;">欢迎咨询e驾陪服务</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 text-center">
+                            <p style="color:#51a8b1">客服电话:&nbsp;4009-606-796 &nbsp;&nbsp;&nbsp;营业时间:&nbsp;周一到周日 &nbsp; 0:00-24:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
